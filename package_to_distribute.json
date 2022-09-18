@@ -1,0 +1,10 @@
+{
+    "name": "pchat-common",
+    "version": "1.0.0",
+    "description": "Training Model",
+    "main": "pchat-common.js",
+    "types": "pchat-common.d.ts",
+    "author": "LongLe",
+    "license": "ISC"
+  }
+   
