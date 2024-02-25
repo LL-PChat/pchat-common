@@ -4,44 +4,9 @@ import commonjs from 'rollup-plugin-commonjs';
 import json from 'rollup-plugin-json';
 
 
-// webviz-common named export sorted Alphabetically
-// Please maintan the order
-let webviz_common_exports = [
-  // common/core/color 
-  'Color', 'ColorMapFactory', 'ColorMapName', 'IColorMap',
-
-  // common/core/math
-  'Matrix4', 'Point2', 'Point3', 'Vector2', 'Vector3',
-
-  // common/core
-  'AbstractPropertyModel', 'BroadcastedEvent', 'Error', 'ErrorLevel', 'EventBroadcaster', 'IBroadcastedEventListener',
-  'IErrorHandler', 'IPropertyChangeListener', 'IPropertyModel', 'ViewerType',
-
-  // data/proto
-  // skipped
-
-  // common/data
-  /*'DataAccessorOptions',*/'DataPropertyConstants', /*'DataType',*/ 'DataUnits', /*'ICurveData',*/ /*'IDirectionalSurveyData',*/ /*'ISeismic2D',*/
-  /*'ISeismic2DQueryParams',*/ /*'ISeismic2DQueryResult',*/ /*'IVolumeData',*/ 'IWellboreData', 'IWellData',
-  /*'Seismic2DQueryResult',*/  /*'SeismicHeader',*/ 'SubVolume', 'SubVolumeParams', 'SurveyTransformHeader',
-  'VolumeDataConverter',
-
-  // common/data - generated
-  'lcm',
-
-  // ui
-  'AbstractAction', 'AbstractActionsProvider', 'AbstractButtonAction', 'AbstractCheckboxAction', 'AbstractColormapPickerAction',
-  'AbstractColorpickerAction', 'AbstractDropdownAction', 'AbstractInputAction', 'AbstractLabelAction', 'AbstractSliderAction', 'AbstractSpinnerAction',
-  'AbstractToggleButtonAction', 'AbstractInputGroupAction', 'Action', 'ActionCategory', 'ActionContext', 'ActionGroup', 'ContextMenu', 'ContextMenuAction',
-  'IComponentObserver', 'Toolbar', 'ToolbarStyle', 'ToolbarTheme', /*ViewAllContextMenuAction',*/
-
-  // remote/core
-  'UniqueIdentifierGenerator'
-];
-
 export default {
   input: 'src/index.ts',
-  output: [
+output: [
     {
       file: 'build/bundle.js',
       format: 'umd',
@@ -55,13 +20,9 @@ export default {
       //preferBuiltins: true,
     }),
     commonjs({
-      include: [
+      exclude: [
         'node_modules/**',
-      ],
-      namedExports: {
-        'node_modules/protobufjs/minimal.js': ['BufferReader', 'util', 'roots', 'Reader', 'Writer'],
-        'node_modules/@nextgengraphics/webviz-common/webviz-common.js': webviz_common_exports,
-      }
+      ]
     }),
     typescript({
       typescript: require('typescript'),

@@ -6,4 +6,5 @@ export interface IChannel extends IActionRecord {
     channelPass: string;
     loginedMember?: string;
     channelMembers: string[];
+    isDeleted?: boolean;
 }
