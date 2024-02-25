@@ -61,7 +61,7 @@ fabric.properties
 # npm #
 build/
 node_modules/
-package-lock.json
+# package-lock.json
 
 # compilation result
 dist/

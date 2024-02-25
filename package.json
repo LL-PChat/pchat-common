@@ -16,7 +16,6 @@
   },
   "license": "ISC",
   "author": "longlv91",
-  "main": "dist/pchat-common.js",
   "types": "dist/pchat-common.d.ts",
   "scripts": {
     "build": "npm run build:ci",
