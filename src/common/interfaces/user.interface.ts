@@ -23,12 +23,12 @@ export interface IUser extends IActionRecord {
   addr2?: IAddress;
 }
 
-export interface AuthLoginModel {
+export interface IAuthLoginModel {
   username: string;
   password: string;
 }
 
-export interface AuthReponseModel {
-  userInfo: IUser,
+export interface IAuthReponseModel {
+  userInfo: IUser;
   access_token: string;
 }
