@@ -7,5 +7,5 @@ export interface IPaginable {
 
 export interface IApiResponse<T> {
     data: T;
-    pagination: IPaginable;
+    pagination?: IPaginable;
 }

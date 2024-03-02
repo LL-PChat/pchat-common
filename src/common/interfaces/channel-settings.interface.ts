@@ -7,5 +7,5 @@ export interface IChannelSettings extends IActionRecord {
     currentTheme: string;
     displayMessageWithin: number;
     expiredDate: Date;
-    metafileds?: Record<string, any>;
+    metafields?: Record<string, any>;
 }
