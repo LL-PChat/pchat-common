@@ -3,6 +3,7 @@ export {
     Role,
     StatusType,
     SocketEventType,
+    MessageType,
 } from './common/enum';
 
 // Public intefaces
