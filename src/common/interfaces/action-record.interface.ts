@@ -1,6 +1,8 @@
+import { Maybe } from '../types';
+
 export interface IActionRecord {
-  createdDate: Date;
-  modifiedDate: Date;
-  createdBy: string;
-  modifiedBy: string;
+  createdDate: Maybe<Date>;
+  modifiedDate: Maybe<Date>;
+  createdBy: Maybe<string>;
+  modifiedBy: Maybe<string>;
 }

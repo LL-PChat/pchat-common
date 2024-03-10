@@ -6,6 +6,11 @@ export {
     MessageType,
 } from './common/enum';
 
+// Public types
+export {
+    Maybe
+} from './common/types';
+
 // Public intefaces
 export {
     IAddress,
